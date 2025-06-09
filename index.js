@@ -6,6 +6,7 @@ import produtosRoutes from "./routes/produtos.js";
 import clienteRoutes from "./routes/cliente.js";
 import pedidoRoutes from "./routes/pedido.js";
 import statusRoutes from "./routes/status.js";
+import printRoutes from "./routes/print.js";
 
 const app = express();
 const PORT = 8800;
@@ -18,6 +19,7 @@ app.use("/cardapio", cardapioRoutes);
 app.use("/produtos", produtosRoutes);
 app.use("/pedidos", pedidoRoutes);
 app.use('/status', statusRoutes)
+app.use('/print', printRoutes)
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
