@@ -1,6 +1,9 @@
-import { db } from "./db.js";
+import { db } from "../db.js";
+
 import escpos from "escpos";
-escpos.SerialPort = require("escpos-serialport");
+import SerialPort from "escpos-serialport";
+
+escpos.SerialPort = SerialPort;
 
 export const printOrderById = (req, res) => {
   const { ped_id } = req.body;
